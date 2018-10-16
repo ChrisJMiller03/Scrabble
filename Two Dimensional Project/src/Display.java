@@ -1,11 +1,18 @@
-
+import java.util.ArrayList;
+import java.util.Scanner;
 public class Display
-	{
+	
+
+
+{
+	static int rack;
 	static 	String [][] board	= new String [7][7];
 		public static void main(String[] args)
 			{
+				LetterDatabase.fillAlphabet();
 				fillArray();
 				display();
+				playScrabble();
 			}
 
 	
@@ -62,4 +69,19 @@ public class Display
 			System.out.println("    --------------------------------------------------");
 		
 		}
+	
+	
+		public static void playScrabble()
+		{
+			
+			
+			for(int i = 0; i<7; i++)
+				{
+					int rack = (int) (Math.random() * 25) + 1;
+					System.out.println(rack);
+				}
+			
+		}
+	
+	
 	}
