@@ -1,14 +1,16 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 public class Display
 	
 
 
 {
-	static int rack;
+	
 	static 	String [][] board	= new String [7][7];
 		public static void main(String[] args)
 			{
+				RackDatabase.fillRack();
 				LetterDatabase.fillAlphabet();
 				fillArray();
 				display();
@@ -30,6 +32,7 @@ public class Display
 								
 							}
 					}
+			
 			}
 	
 		
@@ -77,10 +80,12 @@ public class Display
 			
 			for(int i = 0; i<7; i++)
 				{
-					int rack = (int) (Math.random() * 25) + 1;
-					System.out.println(rack);
+					System.out.print( LetterDatabase.alphabet.get(0).getLetter());
+					System.out.println(" ");
+					RackDatabase.rack.add(LetterDatabase.alphabet.get(0));
+					LetterDatabase.alphabet.remove(0);
 				}
-			
+			System.out.println("The above letters are the letters you can use. Try to make a word.");
 		}
 	
 	

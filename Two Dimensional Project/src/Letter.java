@@ -7,10 +7,10 @@ public class Letter
 		int scoreNumber;
 		String space;
 
-		public Letter(String l, int i, int sn, String s)
+		public Letter(String l, int iv, int sn, String s)
 			{
 				letter = l;
-				inputValue = i;
+				inputValue = iv;
 				scoreNumber = sn;
 				space = s;
 			}
