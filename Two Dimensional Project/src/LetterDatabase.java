@@ -73,6 +73,7 @@ public class LetterDatabase
 				alphabet.add(new Letter("U", 21, 1," "));
 				alphabet.add(new Letter("U", 21, 1," "));
 				alphabet.add(new Letter("U", 21, 1," "));
+				alphabet.add(new Letter("U", 21, 1," "));
 				alphabet.add(new Letter("V", 22, 4," "));
 				alphabet.add(new Letter("V", 22, 4," "));
 				alphabet.add(new Letter("W", 23, 4," "));

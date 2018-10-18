@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -76,16 +77,96 @@ public class Display
 	
 		public static void playScrabble()
 		{
+			int rowInput = 0;
+			int colInput = 0;
 			
 			
 			for(int i = 0; i<7; i++)
 				{
 					System.out.print( LetterDatabase.alphabet.get(0).getLetter());
-					System.out.println(" ");
+					System.out.println();
 					RackDatabase.rack.add(LetterDatabase.alphabet.get(0));
 					LetterDatabase.alphabet.remove(0);
 				}
-			System.out.println("The above letters are the letters you can use. Try to make a word.");
+			System.out.println("The above letters are the letters you can use. Where do you want to put the letter?");
+			Scanner userInput = new Scanner(System.in);
+			String move = userInput.nextLine();
+			
+			if(move.substring(0,1).equals("A")	)	
+				{
+					rowInput= 0;
+				}
+			else if (move.substring(0,1).equals("B"))
+				{
+					rowInput = 1;
+				}
+			else if (move.substring(0,1).equals("C"))
+				{
+					rowInput = 2;
+				}
+			else if (move.substring(0,1).equals("D"))
+				{
+					rowInput = 3;
+				}
+			else if (move.substring(0,1).equals("E"))
+				{
+					rowInput = 4;
+				}
+			else if (move.substring(0,1).equals("F"))
+				{
+					rowInput = 5;
+				}
+			else if (move.substring(0,1).equals("G"))
+				{
+					rowInput = 6;
+				}
+		
+			
+			
+			System.out.println("What letter do you want to use?");
+			Scanner userInput1 = new Scanner(System.in);
+			String chosenLetter = userInput.nextLine();
+			boolean stillPlaying = true;
+			
+			while (stillPlaying)
+				{
+					colInput = Integer.parseInt(move.substring(1,2));
+					colInput = colInput - 1;
+					board[rowInput][colInput] = chosenLetter ;
+					RackDatabase.rack.remove(chosenLetter);
+					display();
+					System.out.println("Do you want to keep playing?");
+					Scanner userInput2 = new Scanner(System.in);
+					String play= userInput.nextLine();
+					if(play.equals("Yes"))
+						{
+							
+						}
+				}
+			
+						
+					
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		}
 	
 	
